@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <link href='timer.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <script src='timer.js'></script>
+  <script>
+    let timer = new Timer(document.body);
+    timer.setDuration('00:01:00');
+    addEventListener('keydown', e => {
+      if (e.key === ' ') {
+        timer.status ? timer.pause() : timer.start();
+      }
+    })
+  </script>
+</body>
+</html>

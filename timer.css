@@ -1,0 +1,68 @@
+@font-face {
+  font-family: timer;
+  src: url(timer.woff2);
+}
+
+.timer-box {
+  position: absolute;
+  width: 560px;
+  height: 128px;
+  border: 4px solid #fffa;
+  border-radius: 4px;
+  background: hsl(210, 30%, 13%);
+}
+
+.timer-anm {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  margin: 18px;
+  border: 6px solid #fff;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.timer-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 96'><path d='M0 4q16 4 32 0t32 0v92H0V0' fill='%23f55'/></svg>"),
+    url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 96'><path d='M0 4q16 2 32 0t32 0v92H0V0' fill='%23f558'/></svg>");
+  background-repeat: repeat-x;
+  background-size: 80px, 160px;
+  background-position-y: 72px, 66px;
+  display: none;
+}
+
+.timer-val {
+  position: absolute;
+  left: 136px;
+  font: 64px timer;
+  line-height: 128px;
+  color: #FFF;
+}
+
+.timer-val>span {
+  display: inline-block;
+  text-align: center;
+}
+
+.timer-s {
+  height: 36px;
+}
+
+.timer-m {
+  height: 24px;
+}
+
+.timer-s,
+.timer-m {
+  position: absolute;
+  width: 6px;
+  border-radius: 6px;
+  left: calc(50% - 3px);
+  bottom: calc(50% - 3px);
+  background: #fff;
+  transform-origin: 3px calc(100% - 3px);
+}
